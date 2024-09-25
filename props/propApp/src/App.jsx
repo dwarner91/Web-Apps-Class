@@ -1,3 +1,71 @@
+function Mytitle() {
+  return (
+    <h1>
+      Dave's Gallery
+    </h1>
+  )
+
+}
+
+function Myimage({ items, width, height }) {
+  return (
+    <>
+      <img
+        src={items.id}
+        alt={items.title}
+        width={width}
+        height={height}
+      />
+      <h2>{"This is " + items.name + " the " + items.title}</h2>
+    </>
+
+
+  );
+
+
+}
+
+export default function App() {
+  return (
+    <>
+      <Mytitle />
+      <Myimage
+        items={{ name: "Diablo", title: "Lord of Terror", id: "https://bloody-disgusting.com/wp-content/uploads/2018/11/diablo.jpg" }}
+        width={700}
+        height={500}
+      />
+      <Myimage
+        items={{ name: "Mario", title: "Plumber", id: "https://mario.nintendo.com/static/86bd56fed456e9b642100519880b6a86/b3853/mario.png" }}
+        width={500}
+        height={500}
+      />
+
+      <Myimage
+        items={{ name: "Link", title: "Hero of Time", id: "https://www.zeldadungeon.net/wiki/images/thumb/c/ce/Link_-_TotK_art_02_alt.png/400px-Link_-_TotK_art_02_alt.png" }}
+        width={500}
+        height={500}
+      />
+
+      <Myimage
+        items={{ name: "Kratos", title: "God of War", id: "https://sm.ign.com/ign_za/review/g/god-of-war/god-of-war-3-remastered-review_ce2s.jpg" }}
+        width={800}
+        height={500}
+      />
+
+      <Myimage
+        items={{ name: "Snotty Ragsdale", title: "Boogerman", id: "https://assets-prd.ignimgs.com/2022/05/13/boogerman-1652485864365.jpg" }}
+        width={500}
+        height={500}
+      />
+
+    </>
+
+  );
+
+}
+
+
+
 // function SkeletonMan() {
 //   return (
 //     <img
@@ -64,33 +132,6 @@
 
 // }
 
-function Mytitle() {
-  return (
-    <h1>
-      Dave's Gallery
-    </h1>
-  )
-
-}
-
-function Myimage({ items, width, height }) {
-  return (
-    <>
-      <img
-        src={items.id}
-        alt={items.title}
-        width={width}
-        height={height}
-      />
-      <h2>{"This is " + items.name + " the " + items.title}</h2>
-    </>
-
-
-  );
-
-
-}
-
 
 // function myCaption() {
 //   return (
@@ -99,42 +140,3 @@ function Myimage({ items, width, height }) {
 //   );
 
 // }
-
-export default function App() {
-  return (
-    <>
-      <Mytitle />
-      <Myimage
-        items={{ name: "Diablo", title: "Lord of Terror", id: "https://bloody-disgusting.com/wp-content/uploads/2018/11/diablo.jpg" }}
-        width={700}
-        height={500}
-      />
-      <Myimage
-        items={{ name: "Mario", title: "Plumber", id: "https://mario.nintendo.com/static/86bd56fed456e9b642100519880b6a86/b3853/mario.png" }}
-        width={500}
-        height={500}
-      />
-
-      <Myimage
-        items={{ name: "Link", title: "Hero of Time", id: "https://www.zeldadungeon.net/wiki/images/thumb/c/ce/Link_-_TotK_art_02_alt.png/400px-Link_-_TotK_art_02_alt.png" }}
-        width={500}
-        height={500}
-      />
-
-      <Myimage
-        items={{ name: "Kratos", title: "God of War", id: "https://sm.ign.com/ign_za/review/g/god-of-war/god-of-war-3-remastered-review_ce2s.jpg" }}
-        width={800}
-        height={500}
-      />
-
-      <Myimage
-        items={{ name: "Snotty Ragsdale", title: "Boogerman", id: "https://assets-prd.ignimgs.com/2022/05/13/boogerman-1652485864365.jpg" }}
-        width={500}
-        height={500}
-      />
-
-    </>
-
-  );
-
-}
